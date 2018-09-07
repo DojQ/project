@@ -1,64 +1,62 @@
-let scrollPosition = window.pageYOffset;
-const menuHeight = 50;
-const documentBody = (document.scrollingElement || document.documentElement || document.body.parentNode || document.body);
-
-const anchors = document.querySelectorAll(".main-menu-items-inside");
-anchors.forEach(anchor => anchor.addEventListener('click', preventJump));
 
 
-function preventJump(event) {
-event.preventDefault();
-const hash = this.getAttribute("href");
+function clock() {
+  let now = new Date();
+  let day = now.getMonth();
+  let hours = now.getHours();
+  let minu = now.getMinutes();
+  let sec = now.getSeconds();
 
-if (history.pushState) {
-  history.pushState(null, null, hash);
-} else {
-  location.hash = hash;
+  if (hours < 10) hours = "0" + hours;
+  if (minu < 10) minu = "0" + minu;
+  if (sec < 10) sec = "0" + sec;
+
+  document.getElementById("clock").innerHTML = hours + ":" + minu + ":" + sec;
+  setTimeout("clock()", 1000);
 }
 
-this.blur();
 
-const difference = Math.abs(document.querySelector(hash).offsetTop - window.pageYOffset);
-const duration = difference / 2;
 
-const elementPosition = document.querySelector(hash).offsetTop;
-smoothScroll(elementPosition, duration, menuHeight);
+function date() {
+  var dt = new Date();
+  var month = dt.getMonth();
+  var day = dt.getDate();
+  var year = dt.getFullYear();
+
+  document.getElementById("date").innerHTML += (month + 1 + '-' + day + '-' + year ) ;
+clock();
 }
+date();
 
-function smoothScroll(scrollTo, duration, fixedHeight) {
-if (duration <= 0) {
-  if (scrollTo == window.pageYOffset) {
-    return;
-  } else {
-    documentBody.scrollTop = scrollTo - fixedHeight;
-    return;
+
+function waluta() {
+  let type = prompt("podaj typ");
+  let value = prompt("podaj wartosc");
+
+  const EUR = 4.2296;
+  const USD = 3.6060;
+  const NOK = 0.4358;
+  const CHF = 3.6313;
+  const GBP = 4.7738;
+
+  switch (type) {
+    case 'EUR':
+        document.getElementById("currency-answer").innerHTML =  value + "złotych to: " + ((value / CHF).toFixed(2) + " euro");
+      break;
+    case 'USD':
+        document.getElementById("currency-answer").innerHTML = value + "złotych to: " + ((value / CHF).toFixed(2) + " dolarów");
+      break;
+    case 'NOK':
+        document.getElementById("currency-answer").innerHTML = value + "złotych to: " +((value / CHF).toFixed(2) + " koron");
+      break;
+    case 'CHF':
+        document.getElementById("currency-answer").innerHTML = value + "złotych to: " +((value / CHF).toFixed(2) + " franków");
+      break;
+    case 'GBP':
+        document.getElementById("currency-answer").innerHTML = value + "złotych to: "+ ((value / CHF).toFixed(2) + " funtów");
+      break;
+    default:
+        document.getElementById("currency-answer").innerHTML = ("wrong value ,pls try again");
+      break;
   }
 }
-let scrollFrom = window.pageYOffset;
-let difference = scrollTo - scrollFrom - fixedHeight;
-let perTick = difference / duration * 10;
-
-setTimeout(function() {
-  documentBody.scrollTop = documentBody.scrollTop + perTick;
-  smoothScroll(scrollTo, duration - 10, fixedHeight);
-}, 10);
-}
-
-
-function menu_hover() {
-      document.getElementsByClassName("main-menu").setAttribute("class", "menu_hover");
-}
-function menu_hover() {
-    document.getElementsByClassName("main-menu").removeAttribute("class");
-}
-
-
-
-
-
-
-
-
-
-
-//

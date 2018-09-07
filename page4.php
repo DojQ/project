@@ -15,31 +15,32 @@
       <nav class="main_menu">
        <ul class="main-menu-list">
          <li class="main-menu-items">
-           <a href="../projekt/index.php" class="starter main-menu-items-inside">  BELGIA  </a>
+           <a href="../project/index.php" class="starter main-menu-items-inside">  BELGIA  </a>
          </li>
          <li class="main-menu-items">
-           <a  href="../projekt/page2.php" class="main-menu-items-inside"> MIASTA </a>
+           <a  href="../project/page2.php" class="main-menu-items-inside"> MIASTA </a>
          </li>
          <li class="main-menu-items">
-           <a href="../projekt/page3.php" class="main-menu-items-inside">  ZDJECIA   </a>
+           <a href="../project/page3.php" class="main-menu-items-inside">  ZDJECIA   </a>
          </li>
          <li class="main-menu-items">
-           <a href="../projekt/page4.php" class="main-menu-items-inside">  WALUTA </a>
+           <a href="../project/page4.php" class="main-menu-items-inside">  WALUTA </a>
          </li>
        </ul>
      </nav>
+     <div class="currency">
+       <div class="currency-button">
+       <a onclick="waluta()">WALUTA</a>
+       </div>
+       <div id="currency-answer" class="currency-answer"></div>
+       </div>
 
+     <footer class="footer">
+         <div id="clock" class="clock"></div>
+         <div id="date" class="date"></div>
+     </footer>
 
-
-
-
-
-
-
-
-
-
-
+ <script src="main.js"> </script>
     </section>
 
   </body>

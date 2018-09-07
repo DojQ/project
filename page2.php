@@ -8,11 +8,11 @@
     <title>BELGIA</title>
   </head>
   <body>
-    <section class="main_section">
+    <section class="main_section-2page">
       <div class="header">
           <h1 class="header_items"> MIASTA </h1>
       </div>
-      <nav class="main_menu">
+      <nav class="main_menu-2page">
        <ul class="main-menu-list">
          <li class="main-menu-items">
            <a href="../projekt/index.php" class="starter main-menu-items-inside">  BELGIA  </a>
@@ -28,7 +28,44 @@
          </li>
        </ul>
      </nav>
+   </div>
+     <div class="city">
+       <div class="city-photo">
 
+       </div>
+       <div class="city-information">
+        <span class="city-text">
+           <h2> BRUKSELA </h2> </br>
+
+       <br> miasto i stolica Belgii oraz Unii Europejskiej, położone w środkowej części kraju nad rzeką Zenne.
+      </span>
+       </div>
+   </div>
+
+       <div class="city">
+         <div class="city-photo">
+
+         </div>
+         <div class="city-information">
+          <span class="city-text">
+             <h2> ANTWERPIA </h2> </br>
+
+         <br> miasto w północnej Belgii, w Regionie Flamandzkim, w dystrykcie Antwerpia, położone nad Skaldą.
+        </span>
+         </div>
+     </div>
+         <div class="city">
+           <div class="city-photo">
+
+           </div>
+           <div class="city-information">
+            <span class="city-text">
+               <h2> GANDAWA </h2> </br>
+
+           <br>  miasto w północno-zachodniej części Belgii, w regionie Flandrii, stolica prowincji Flandria Wschodnia. Leży przy ujściu rzeki Leie do Skaldy
+          </span>
+           </div>
+       </div>
 
 
 

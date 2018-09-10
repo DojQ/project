@@ -21,7 +21,7 @@
            <a  href="../project/page2.php" class="main-menu-items-inside"> MIASTA </a>
          </li>
          <li class="main-menu-items">
-           <a href="../project/page3.php" class="main-menu-items-inside">  ZDJECIA   </a>
+           <a href="../project/page3.php" class="main-menu-items-inside">  CIEKAWOSTKI   </a>
          </li>
          <li class="main-menu-items">
            <a href="../project/page4.php" class="main-menu-items-inside">  WALUTA </a>

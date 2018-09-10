@@ -25,7 +25,7 @@ html,body {
   background: #D50000;
   margin: 0px auto;
   border: 4px solid #fff;
-  width: 200px;
+  width: 250px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -77,7 +77,7 @@ html,body {
   list-style: none;
 }
 .main-menu-items {
-  width: 100px;
+  width: 130px;
   margin: 30px auto;
   border: 2px solid #fff;
   border-radius: 15px;
@@ -178,9 +178,25 @@ html,body {
   line-height: 30px;
 }
 .currency-answer {
-  margin: 0px 130px;
+  margin-right: calc( 50% - 390px );
+  margin-left: calc( 50% - 390px );
   height: 200px;
   width: 300px;
+  background: #000;
+  border: 4px solid #fff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.interesting_facts {
+  margin-right: calc( 50% - 254px );
+  margin-left: calc( 50% - 254px );
+  height: 300px;
+  width: 500px;
   background: #000;
   border: 4px solid #fff;
   color: #fff;
